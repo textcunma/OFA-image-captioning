@@ -23,8 +23,13 @@ https://huggingface.co/OFA-Sys
 
 ## 実行
 ```
-python main.py
+python main.py --image_path "./test.png" --ckpt_dir "./OFA-huge"
 ```
+
+## 結果例
+<img src="test.png">
+
+**purple abstract irregular polygonal illustration, which consist of triangles.**
 
 ## 参考
 

@@ -3,10 +3,13 @@
 from PIL import Image
 from torchvision import transforms
 import torch
+import argparse
 from transformers import OFATokenizer, OFAModel
 from OFA.transformers.src.transformers.models.ofa.generate import sequence_generator
 
-def image_caption(image_path, ckpt_dir = "./OFA-huge"):
+def image_caption(args):
+    image_path = args.image_path
+    ckpt_dir = args.ckpt_dir
 
     mean, std = [0.5, 0.5, 0.5], [0.5, 0.5, 0.5]
     resolution = 480
@@ -42,6 +45,12 @@ def image_caption(image_path, ckpt_dir = "./OFA-huge"):
     return tokenizer.batch_decode(gen, skip_special_tokens=True)
 
 
-# 実行
-result_txt = image_caption("test.png")
-print(result_txt)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('--image_path', type=str, default="./test.png")
+    parser.add_argument('--ckpt_dir', type=str, default="./OFA-huge")
+    args = parser.parse_args()
+
+    # 実行
+    result_txt = image_caption(args)
+    print(result_txt)

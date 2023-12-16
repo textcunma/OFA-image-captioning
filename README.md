@@ -1,7 +1,6 @@
 # OFA-image-captioning
 image captioning by OFA
 
-
 ## 準備
 
 ### 仮想環境
@@ -21,6 +20,11 @@ git lfs clone https://huggingface.co/OFA-Sys/OFA-huge
 
 その他のサイズは以下を参照
 https://huggingface.co/OFA-Sys
+
+## 実行
+```
+python main.py
+```
 
 ## 参考
 

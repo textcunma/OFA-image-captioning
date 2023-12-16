@@ -44,10 +44,9 @@ def image_caption(args):
 
     return tokenizer.batch_decode(gen, skip_special_tokens=True)
 
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('--image_path', type=str, default="./test.png")
+    parser.add_argument('--image_path', type=str, default="test.png")
     parser.add_argument('--ckpt_dir', type=str, default="./OFA-huge")
     args = parser.parse_args()
 

@@ -23,7 +23,9 @@ https://huggingface.co/OFA-Sys
 
 ## 実行
 ```
-python main.py --image_path "./test.png" --ckpt_dir "./OFA-huge"
+python captioning_image.py --image_path "./test.png" --ckpt_dir "./OFA-huge"
+
+python captioning_keyframes.py --video_path "./test.mp4" --ckpt_dir "./OFA-huge"
 ```
 
 ## 結果例
